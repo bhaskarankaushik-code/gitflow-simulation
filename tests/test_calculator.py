@@ -20,3 +20,9 @@ def test_multiply():
 
 def test_divide():
     assert calculator.divide(8, 2) == 4
+
+
+def test_divide_by_zero():
+    import pytest
+    with pytest.raises(ValueError):
+        calculator.divide(1, 0)
